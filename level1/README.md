@@ -12,7 +12,9 @@ En el primer caso:
 
 Como Client B ya tiene la dirección IP 104.99.23.12, Client A debe usar una dirección IP en el mismo rango. Podríamos usar, por ejemplo:
 
-- **Client A:** IP: 104.99.23.Y / Máscara: 255.255.255.0
+**Client A:**
+- IP: 104.99.23.Y
+- Máscara: 255.255.255.0
 
 En la IP, **"Y"** es un número válido en el rango de direcciones para la misma red, de 1 a 254, ya que la dirección IP 104.99.23.0 se reserva generalmente como dirección de red y la dirección IP 104.99.23.255 se reserva como dirección de broadcast en una máscara de red con 255.255.255.0.
 
