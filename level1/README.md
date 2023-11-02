@@ -12,7 +12,7 @@ En el primer caso:
 
 Como Client B ya tiene la dirección IP 104.99.23.12, Client A debe usar una dirección IP en el mismo rango. Podríamos usar, por ejemplo:
 
-- **Client A:**
+**Client A:**
 - IP: 104.99.23.Y
 - Máscara: 255.255.255.0
 
