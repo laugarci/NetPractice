@@ -87,7 +87,7 @@ Si no se quiere especificar una dirección de destino en particular, se puede ut
 
 ### Next hop
 
-El "next hop" es la dirección del siguiente enrutador al que se deben enviar los paquetes de datos para alcanzar la red de destino. En esencia, indica el próximo dispositivo o enrutador en la ruta que se debe seguir para entregar los paquetes a su destino final. El "next hop" es la próxima parada en el camino hacia la red de destino.
+El "next hop" es la dirección del siguiente router al que se deben enviar los paquetes de datos para alcanzar la red de destino. En esencia, indica el próximo dispositivo o router en la ruta que se debe seguir para entregar los paquetes a su destino final. El "next hop" es la próxima parada en el camino hacia la red de destino.
 
 ### Función de la tabla de enrutamiento
 
