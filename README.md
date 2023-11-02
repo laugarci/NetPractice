@@ -81,3 +81,21 @@ El "next hop" es la dirección del siguiente enrutador al que se deben enviar lo
 Cuando un dispositivo, como un router, recibe un paquete de datos que debe transmitirse a través de la red, consulta su tabla de enrutamiento para determinar cómo dirigir el paquete. El dispositivo busca una entrada en la tabla de enrutamiento que coincida con la dirección de destino del paquete y luego utiliza la información del "next hop" para enviar el paquete al siguiente enrutador en el camino hacia su destino.
 
 En resumen, la tabla de enrutamiento es una herramienta esencial que permite a los dispositivos de red, como routers, determinar cómo enrutar eficazmente los paquetes de datos hacia su destino. Al almacenar información sobre destinos y próximos saltos, la tabla de enrutamiento facilita la toma de decisiones sobre cómo se deben dirigir los datos a través de la red. Cada entrada en la tabla representa una ruta específica a una red o el camino predeterminado para los paquetes sin una coincidencia exacta en la tabla.
+
+## Red (Network)
+
+Una red es un conjunto de dispositivos de computación interconectados que pueden comunicarse entre sí para compartir información y recursos. Estos dispositivos pueden incluir ordenadores, servidores, impresoras, routers...
+
+Para tener una red que funcione correctamente, es necesario aplicar todos los componentes mencionados anteriormente. Esto significa que todos los dispositivos deben estar configurados y conectados de manera adecuada en la red.
+
+La comunicación efectiva en una red requiere que los dispositivos estén conectados, ya sea directamente entre sí o a través de routers que formen parte de ambas redes. Los routers desempeñan un papel crucial al conectar redes separadas y permitir que los dispositivos de una red se comuniquen con los de otra.
+
+Para determinar si dos dispositivos están en la misma red, se realiza una operación lógica de tipo "Y" bit a bit entre la dirección IP y la máscara de subred de cada dispositivo: 
+- Primero, se convierten las direcciones IP y las máscaras de subred a su equivalente en formato binario (ceros y unos).
+- Luego, se realiza una operación "&" bit a bit entre los bits correspondientes de la dirección IP y la máscara de subred. Si ambos bits son "1", el bit correspondiente en la dirección de red resultante es "1"; en cualquier otro caso, el bit resultante es "0".
+
+**Ejemplo:**
+
+Si tienes una dirección IP de "192.168.100.1" y una máscara de subred de "255.255.255.0", realizas la operación de tipo "&" bit a bit y obtienes la dirección de red "192.168.100.0".
+
+Si dos dispositivos comparten la misma dirección de red, significa que están en la misma red y pueden comunicarse entre sí de manera directa, sin necesidad de enrutadores. La dirección de red es lo que identifica la red a la que pertenecen.
