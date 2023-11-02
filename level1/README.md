@@ -1,8 +1,8 @@
 ## Level 1
 
-### CASO 1:
-
 ![Solucion](https://github.com/laugarci/NetPractice/blob/main/level1/level1.png)
+
+### CASO 1:
 
 Para que un cliente pueda comunicarse con el otro, debemos asegurarnos de que ambos estén en la misma red, lo que significa que deben compartir los mismos tres primeros bloques de la dirección IP.
 
