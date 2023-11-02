@@ -1,5 +1,18 @@
 # NetPractice
 
+# NetPractice README
+
+## Índice
+
+1. [Direcciones IP IPv4](#direcciones-ip-ipv4)
+2. [IPs especiales](#ips-especiales)
+3. [Máscara de red IPv4](#máscara-de-red-ipv4)
+4. [Routers y Switches](#routers-y-switches)
+5. [Tabla de enrutamiento](#tabla-de-enrutamiento)
+6. [Red (Network)](#red-network)
+7. [Solución de Net Practice](#solución-de-net-practice)
+
+
 ## Direcciones IP IPv4
 
 Las direcciones IP son números que se utilizan para identificar dispositivos en una red. En el caso de IPv4, estas direcciones constan de 32 bits, lo que significa que están compuestas por 32 dígitos binarios (0 y 1). Para facilitar la representación, las direcciones IP se dividen en 4 grupos de 8 bits, a menudo llamados "bloques" o "octetos". Cada uno de estos bloques se representa en notación decimal y varía desde 0 hasta 255. Cada bloque puede tener un valor mínimo de 0 y un valor máximo de 255. Esto significa que cada bloque de 8 bits puede variar de 0 a 255.
@@ -99,3 +112,7 @@ Para determinar si dos dispositivos están en la misma red, se realiza una opera
 Si tienes una dirección IP de "192.168.100.1" y una máscara de subred de "255.255.255.0", realizas la operación de tipo "&" bit a bit y obtienes la dirección de red "192.168.100.0".
 
 Si dos dispositivos comparten la misma dirección de red, significa que están en la misma red y pueden comunicarse entre sí de manera directa, sin necesidad de enrutadores. La dirección de red es lo que identifica la red a la que pertenecen.
+
+## Solución de Net Practice
+
+- Level 1
