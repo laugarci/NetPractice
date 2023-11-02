@@ -32,6 +32,52 @@ La característica especial de la máscara de red es que, una vez que un bit se 
 
 La elección de la máscara de red afecta la cantidad de direcciones IP utilizables en una subred y la cantidad de subredes que se pueden crear. Cuanto más pequeña es la máscara (menos bits se reservan para la red), más direcciones IP se pueden utilizar en una subred, pero se pueden crear menos subredes. Por otro lado, una máscara más grande permite más subredes, pero con menos direcciones IP utilizables en cada una.
 
+| CIDR | Notación de punto decimal | Número de direcciones IP por subred | Direcciones IP utilizables por subred | Número de subredes |
+|------|----------------------------|------------------------------------|--------------------------------------|---------------------|
+| /32  | 255.255.255.255            | 1                                  | 0                                    | 256                 |
+| /31  | 255.255.255.254            | 2                                  | 0                                    | 128                 |
+| /30  | 255.255.255.252            | 4                                  | 2                                    | 64                  |
+| /29  | 255.255.255.248            | 8                                  | 6                                    | 32                  |
+| /28  | 255.255.255.240            | 16                                 | 14                                   | 16                  |
+| /27  | 255.255.255.224            | 32                                 | 30                                   | 8                   |
+| /26  | 255.255.255.192            | 64                                 | 62                                   | 4                   |
+| /25  | 255.255.255.128            | 128                                | 126                                  | 2                   |
+| /24  | 255.255.255.0              | 256                                | 254                                  | 1                   |
+
+
 Para que dos dispositivos puedan enviarse paquetes entre sí en una red, deben estar en la misma red o estar conectados a través de un enrutador que pertenezca a ambas subredes. En otras palabras, para la comunicación directa entre dispositivos, deben compartir los mismos primeros bloques de la dirección IP definidos por la máscara de red.
 
+## Routers y Switches
 
+### Switches
+
+Un switch es un dispositivo de red que se utiliza para conectar múltiples dispositivos dentro de una misma red local (LAN). Su función principal es la de distribuir paquetes de datos entre estos dispositivos. En una red, los dispositivos, como ordenadores, impresoras y servidores, se conectan a un switch para poder comunicarse entre sí. El switch toma los datos que provienen de un dispositivo y los envía al dispositivo de destino correcto en la red, lo que mejora la eficiencia y la velocidad de la comunicación dentro de la LAN.
+Los switches operan en la capa de enlace de datos del modelo OSI y utilizan direcciones MAC (Media Access Control) para determinar a qué dispositivo debe entregarse un paquete.
+Los switches se utilizan en redes locales, como en oficinas o casas. Son ideales para redes donde se necesita un alto tráfico de datos entre dispositivos en la misma red.
+
+### Routers
+
+Un router es un dispositivo que se utiliza para conectar diferentes redes entre sí. Su función principal es la de dirigir paquetes de datos entre estas redes, lo que permite la comunicación entre dispositivos en redes separadas.
+Los routers operan en la capa de red del modelo OSI y utilizan direcciones IP para determinar cómo dirigir los paquetes de datos de una red a otra. Son esenciales para la conectividad entre redes, como la conexión de la red local a Internet.
+Un router puede ser parte de múltiples redes y utiliza sus interfaces para conectarse a cada una de ellas. Por ejemplo, un router puede estar conectado a la red local (LAN) y a Internet a través del proveedor de servicios de Internet (ISP).
+Los routers son responsables de tomar decisiones sobre la mejor ruta para enviar paquetes de datos y de garantizar que los paquetes lleguen a su destino correcto. Además, pueden realizar funciones de seguridad, como el filtrado de paquetes no deseados.
+
+En resumen, los **switches** se utilizan para conectar múltiples dispositivos en una misma red local y facilitar la comunicación dentro de esa red, mientras que los **routers** se utilizan para conectar diferentes redes entre sí, dirigir paquetes de datos y permitir la comunicación entre redes separadas, incluida la conexión a Internet.
+
+## Tabla de enrutamiento
+
+La función principal de la tabla de enrutamiento es almacenar información sobre cómo dirigir paquetes de datos desde un dispositivo a su destino a través de la red.
+
+### Destino
+El "destino" se refiere a la dirección de red a la que se quiere enviar un paquete de datos. Esto podría ser una red específica dentro de la infraestructura de la red, identificada por su dirección IP y su máscara. 
+Si no se quiere especificar una dirección de destino en particular, se puede utilizar una entrada especial denominada "predeterminado" o "default". Esta entrada se utiliza para dirigir todos los paquetes de datos que no coinciden con ninguna otra entrada en la tabla de enrutamiento.
+
+### Next hop
+
+El "next hop" es la dirección del siguiente enrutador al que se deben enviar los paquetes de datos para alcanzar la red de destino. En esencia, indica el próximo dispositivo o enrutador en la ruta que se debe seguir para entregar los paquetes a su destino final. El "next hop" es la próxima parada en el camino hacia la red de destino.
+
+### Función de la tabla de enrutamiento
+
+Cuando un dispositivo, como un router, recibe un paquete de datos que debe transmitirse a través de la red, consulta su tabla de enrutamiento para determinar cómo dirigir el paquete. El dispositivo busca una entrada en la tabla de enrutamiento que coincida con la dirección de destino del paquete y luego utiliza la información del "next hop" para enviar el paquete al siguiente enrutador en el camino hacia su destino.
+
+En resumen, la tabla de enrutamiento es una herramienta esencial que permite a los dispositivos de red, como routers, determinar cómo enrutar eficazmente los paquetes de datos hacia su destino. Al almacenar información sobre destinos y próximos saltos, la tabla de enrutamiento facilita la toma de decisiones sobre cómo se deben dirigir los datos a través de la red. Cada entrada en la tabla representa una ruta específica a una red o el camino predeterminado para los paquetes sin una coincidencia exacta en la tabla.
