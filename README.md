@@ -1,7 +1,5 @@
 # NetPractice
 
-# NetPractice README
-
 ## Índice
 
 1. [Direcciones IP IPv4](#direcciones-ip-ipv4)
