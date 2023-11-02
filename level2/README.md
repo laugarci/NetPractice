@@ -10,7 +10,9 @@ Para que un cliente pueda comunicarse con el otro, debemos asegurarnos de que am
 - IP: 192.168.134.200
 - Máscara: 255.255.255.224
 
-**Interface B1:** IP: 192.168.134.222 / Máscara: 255.255.255.224
+**Interface B1:**
+- IP: 192.168.134.222
+- Máscara: 255.255.255.224
 
 ### CASO 2:
 
