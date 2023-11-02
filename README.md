@@ -115,5 +115,5 @@ Si dos dispositivos comparten la misma dirección de red, significa que están e
 
 ## Solución de Net Practice
 
-- [Level 1](https://github.com/laugarci/NetPractice/level1)
+- [Level 1](https://github.com/laugarci/NetPractice/tree/main/level1)
 
