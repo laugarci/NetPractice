@@ -15,6 +15,13 @@
 
 Las direcciones IP son números que se utilizan para identificar dispositivos en una red. En el caso de IPv4, estas direcciones constan de 32 bits, lo que significa que están compuestas por 32 dígitos binarios (0 y 1). Para facilitar la representación, las direcciones IP se dividen en 4 grupos de 8 bits, a menudo llamados "bloques" o "octetos". Cada uno de estos bloques se representa en notación decimal y varía desde 0 hasta 255. Cada bloque puede tener un valor mínimo de 0 y un valor máximo de 255. Esto significa que cada bloque de 8 bits puede variar de 0 a 255.
 
+Cada grupo de 8 bits representa lo siguiente:
+
+- **Primer grupo:** se conoce como el "octeto de red" y se utiliza para identificar la red en la que se encuentra el dispositivo.
+- **Segundo grupo:** se utiliza para identificar el "subgrupo de red" o "subred". Permite dividir una red en subredes más pequeñas.
+- **Tercer grupo:** se utiliza para identificar el "subgrupo de host" o "host" en la subred. Es la parte que identifica de manera única un dispositivo en la red o subred en cuestión.
+- **Cuarto grupo:** \se utiliza para representar el "host" en la red o subred. Proporciona una identificación única para un dispositivo específico en la red o subred.
+
 ## IPs especiales
 
 #### Network privadas:
