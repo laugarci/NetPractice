@@ -118,6 +118,36 @@ Si tienes una dirección IP de "192.168.100.1" y una máscara de subred de "255.
 
 Si dos dispositivos comparten la misma dirección de red, significa que están en la misma red y pueden comunicarse entre sí de manera directa, sin necesidad de enrutadores. La dirección de red es lo que identifica la red a la que pertenecen.
 
+## Determinar rangos de IP válidos
+
+Para determinar los rangos de IP válidos para una máscara de subred específica, primero necesitas saber la dirección IP de la red y la máscara de subred en uso. Luego, puedes realizar el siguiente cálculo:
+
+- **Encuentra la dirección de red:** Realiza una operación & (AND) entre la dirección IP y la máscara de subred. Esto te dará la dirección de red.
+- **Encuentra la dirección de difusión:** Invierte los bits de la máscara de subred y realiza una operación | (OR) con la dirección de red. Esto te dará la dirección de difusión.
+
+Los rangos de IP válidos son todas las direcciones IP entre la dirección de red y la dirección de difusión, excluyendo estas dos direcciones.
+
+**Ejemplo:**
+Supongamos que tienes la siguiente dirección IP y máscara de subred:
+
+- Dirección IP: 192.168.1.10
+- Máscara de subred: 255.255.255.0
+
+Encuentra la dirección de red: realiza una operación & (AND) entre la dirección IP y la máscara de subred:
+```
+Dirección IP: 11000000.10101000.00000001.00001010
+Máscara de subred: 11111111.11111111.11111111.00000000
+Dirección de red: 11000000.10101000.00000001.00000000 (192.168.1.0)
+```
+Encuentra la dirección de difusión:
+- Invierte los bits de la máscara de subred y realiza una operación | (OR) con la dirección de red:
+```
+Dirección de red: 11000000.10101000.00000001.00000000
+Máscara invertida: 00000000.00000000.00000000.11111111
+Dirección de difusión: 11000000.10101000.00000001.11111111 (192.168.1.255)
+```
+Los rangos de IP válidos son todos los valores entre la dirección de red y la dirección de difusión, excluyendo estas dos direcciones. En este caso, los rangos válidos son desde 192.168.1.1 hasta 192.168.1.254.
+
 ## Solución de Net Practice
 
 - [Level 1](https://github.com/laugarci/NetPractice/tree/main/level1)
