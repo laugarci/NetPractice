@@ -65,6 +65,34 @@ La elección de la máscara de red afecta la cantidad de direcciones IP utilizab
 
 Para que dos dispositivos puedan enviarse paquetes entre sí en una red, deben estar en la misma red o estar conectados a través de un enrutador que pertenezca a ambas subredes. En otras palabras, para la comunicación directa entre dispositivos, deben compartir los mismos primeros bloques de la dirección IP definidos por la máscara de red.
 
+## Direccionenes IP según la máscara
+
+Para saber qué direcciones IP están reservadas en una subred según una máscara de subred dada, debemos:
+
+**1. Identificar la dirección de red:** La dirección de red es la primera dirección de la subred y se obtiene tomando la dirección IP dada y estableciendo todos los bits de host en 0. Por ejemplo, si tienes una dirección IP 192.168.1.5 con una máscara de subred /30 (255.255.255.252), la dirección de red sería 192.168.1.4. Ejemplo:
+
+Para determinar cuáles son los bits de host en la dirección IP 192.168.1.5, primero necesitas conocer la máscara de subred asociada. Sin la máscara de subred, no se puede decir con certeza cuáles son los bits de host.
+
+Si tienes la máscara de subred, puedes realizar una operación de & entre la dirección IP y la máscara de subred para obtener la parte de red y la parte de host. Por ejemplo, si la máscara de subred es 255.255.255.252 (que equivale a una máscara /30), puedes realizar la operación de & de la siguiente manera:
+
+- **Dirección IP:** 192.168.1.5 = 11000000.10101000.00000001.00000101
+- **Máscara de subred:** 255.255.255.252 = 11111111.11111111.11111111.11111100
+- **Resultado:** 11000000.10101000.00000001.00000100
+
+Los bits de host en la dirección IP 192.168.1.5 son aquellos que están en 1 en la dirección IP después de aplicar el &. En este caso, los bits de host son 00000100, lo que equivale a 4 en decimal.
+
+**2. Identificar la dirección de difusión:** es una dirección especial utilizada para enviar datos a todos los dispositivos en una red específica. Se utiliza para la difusión de información a todos los hosts en una red en lugar de enviarla a un host específico. La dirección de difusión varía según la máscara de subred y se obtiene de la siguiente manera:
+
+- **Dirección IP:** 192.168.1.5 = 11000000.10101000.00000001.00000101
+- **Máscara de subred:** 255.255.255.252 = 11111111.11111111.11111111.11111100
+
+Realizando el &, obtuvimos la dirección de red 192.168.1.4. Para obtener la dirección de difusión, cambiamos los bits de host a 1:
+
+- **Dirección de red:** 11000000.10101000.00000001.00000100
+- **Dirección de difusión:** 11000000.10101000.00000001.00000111
+
+Por lo tanto, la dirección de difusión en este caso es 192.168.1.7.
+
 ## Routers y Switches
 
 ### Switches
