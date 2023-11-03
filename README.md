@@ -125,3 +125,6 @@ Si dos dispositivos comparten la misma dirección de red, significa que están e
 - [Level 3](https://github.com/laugarci/NetPractice/tree/main/level3)
 - [Level 4](https://github.com/laugarci/NetPractice/tree/main/level4)
 - [Level 5](https://github.com/laugarci/NetPractice/tree/main/level5)
+- [Level 6](https://github.com/laugarci/NetPractice/tree/main/level6)
+- [Level 7](https://github.com/laugarci/NetPractice/tree/main/level7)
+- [Level 8](https://github.com/laugarci/NetPractice/tree/main/level8)
