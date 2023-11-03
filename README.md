@@ -17,10 +17,10 @@ Las direcciones IP son números que se utilizan para identificar dispositivos en
 
 Cada grupo de 8 bits representa lo siguiente:
 
-- **Primer grupo:** se conoce como el "octeto de red" y se utiliza para identificar la red en la que se encuentra el dispositivo.
-- **Segundo grupo:** se utiliza para identificar el "subgrupo de red" o "subred". Permite dividir una red en subredes más pequeñas.
-- **Tercer grupo:** se utiliza para identificar el "subgrupo de host" o "host" en la subred. Es la parte que identifica de manera única un dispositivo en la red o subred en cuestión.
-- **Cuarto grupo:** se utiliza para representar el "host" en la red o subred. Proporciona una identificación única para un dispositivo específico en la red o subred.
+- **Primer grupo (red):** se conoce como el "octeto de red" y se utiliza para identificar la red en la que se encuentra el dispositivo. Todos los dispositivos en una misma red tienen el mismo número en este grupo.
+- **Segundo grupo (subred):** se utiliza para identificar el "subgrupo de red" o "subred". Permite dividir una red en subredes más pequeñas.
+- **Tercer grupo (host dentro de la subred):** se utiliza para identificar el "subgrupo de host" o "host" en la subred. Es la parte que identifica de manera única un dispositivo en la red o subred en cuestión. Cada dispositivo en la subred tiene un número único en este grupo, que lo diferencia de los demás en la misma subred.
+- **Cuarto grupo (host específico):** se utiliza para representar el "host" en la red o subred. Proporciona una identificación única para un dispositivo específico en la red o subred.
 
 ## IPs especiales
 
