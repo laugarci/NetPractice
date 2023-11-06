@@ -170,3 +170,5 @@ Los rangos de IP válidos son todos los valores entre la dirección de red y la 
 - [Level 6](https://github.com/laugarci/NetPractice/tree/main/level6)
 - [Level 7](https://github.com/laugarci/NetPractice/tree/main/level7)
 - [Level 8](https://github.com/laugarci/NetPractice/tree/main/level8)
+- [Level 9](https://github.com/laugarci/NetPractice/tree/main/level9)
+- [Level 10](https://github.com/laugarci/NetPractice/tree/main/level10)
