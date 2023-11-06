@@ -3,7 +3,7 @@
 ## Índice
 
 1. [Direcciones IP IPv4](#direcciones-ip-ipv4)
-2. [IPs especiales](#ips-especiales)
+2. [Tipos de IP](#tipos-de-ip)
 3. [Máscara de red IPv4](#máscara-de-red-ipv4)
 4. [Routers y Switches](#routers-y-switches)
 5. [Tabla de enrutamiento](#tabla-de-enrutamiento)
@@ -22,7 +22,19 @@ Cada grupo de 8 bits representa lo siguiente:
 - **Tercer grupo (host dentro de la subred):** se utiliza para identificar el "subgrupo de host" o "host" en la subred. Es la parte que identifica de manera única un dispositivo en la red o subred en cuestión. Cada dispositivo en la subred tiene un número único en este grupo, que lo diferencia de los demás en la misma subred.
 - **Cuarto grupo (host específico):** se utiliza para representar el "host" en la red o subred. Proporciona una identificación única para un dispositivo específico en la red o subred.
 
-## IPs especiales
+## Tipos de IP
+
+Las direcciones IP se dividen en cinco clases principales, denominadas A, B, C, D y E, y cada una de ellas se usa para propósitos específicos:
+
+- Clase A: El rango de direcciones IP de clase A va desde 0.0.0.0 a 127.255.255.255. La máscara de subred de clase A es 255.0.0.0. Las direcciones de clase A generalmente se utilizan en redes grandes, ya que el primer octeto se reserva para la red y los tres octetos restantes para los dispositivos en esa red.
+
+- Clase B: Las direcciones de clase B se encuentran en el rango de 128.0.0.0 a 191.255.255.255, y su máscara de subred es 255.255.0.0. Las direcciones de clase B se utilizan para redes medianas.
+
+- Clase C: La clase C tiene direcciones que van desde 192.0.0.0 a 223.255.255.255, con una máscara de subred de 255.255.255.0. Se utilizan para redes más pequeñas y son bastante comunes en hogares y pequeñas empresas.
+
+- Clase D: Las direcciones de clase D están en el rango de 224.0.0.0 a 239.255.255.255 y se utilizan para la multidifusión. La multidifusión permite enviar datos a múltiples destinos de manera simultánea.
+
+- Clase E: Las direcciones de clase E van desde 240.0.0.0 a 254.255.255.255. Están reservadas para fines experimentales o de pruebas y no se utilizan en la mayoría de las redes.
 
 #### Network privadas:
 
@@ -41,20 +53,6 @@ Estos rangos de IPs estan reservads para las direcciones loopback:
 ```
 127.0.0.0 – 127.255.255.255
 ```
-
-#### Tipos de IP
-
-Las direcciones IP se dividen en cinco clases principales, denominadas A, B, C, D y E, y cada una de ellas se usa para propósitos específicos:
-
-- Clase A: El rango de direcciones IP de clase A va desde 0.0.0.0 a 127.255.255.255. La máscara de subred de clase A es 255.0.0.0. Las direcciones de clase A generalmente se utilizan en redes grandes, ya que el primer octeto se reserva para la red y los tres octetos restantes para los dispositivos en esa red.
-
-- Clase B: Las direcciones de clase B se encuentran en el rango de 128.0.0.0 a 191.255.255.255, y su máscara de subred es 255.255.0.0. Las direcciones de clase B se utilizan para redes medianas.
-
-- Clase C: La clase C tiene direcciones que van desde 192.0.0.0 a 223.255.255.255, con una máscara de subred de 255.255.255.0. Se utilizan para redes más pequeñas y son bastante comunes en hogares y pequeñas empresas.
-
-- Clase D: Las direcciones de clase D están en el rango de 224.0.0.0 a 239.255.255.255 y se utilizan para la multidifusión. La multidifusión permite enviar datos a múltiples destinos de manera simultánea.
-
-- Clase E: Las direcciones de clase E van desde 240.0.0.0 a 254.255.255.255. Están reservadas para fines experimentales o de pruebas y no se utilizan en la mayoría de las redes.
 
 ## Máscara de red IPv4
 
